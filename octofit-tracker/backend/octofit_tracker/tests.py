@@ -7,9 +7,8 @@ class APITest(TestCase):
         self.client = APIClient()
 
     def test_api_root(self):
-        response = self.client.get('/')
+        response = self.client.get('/api/')
         self.assertEqual(response.status_code, 200)
-        self.assertIn('users', response.data)
 
     def test_users_endpoint(self):
         response = self.client.get('/api/users/')

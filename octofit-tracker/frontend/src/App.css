@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --app-bg: #edf4fb;
+  --ink: #13243b;
+  --ink-soft: #35526e;
+  --navbar: #1e3a54;
+  --navbar-active: #f3a64c;
+  --brand-accent: #f28e2b;
+  --brand-accent-strong: #e67100;
+  --link: #176fb1;
+  --link-hover: #0f4d7a;
+  --table-head-bg: #174468;
+  --table-head-text: #f7fbff;
+  --table-row-even: #f8fbff;
+  --table-row-hover: #e9f3ff;
+  --surface: #ffffff;
+  --surface-accent: #ebf2f8;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(243, 166, 76, 0.22), transparent 36%),
+    radial-gradient(circle at 90% 10%, rgba(30, 58, 84, 0.22), transparent 34%),
+    var(--app-bg);
+  color: var(--ink);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #0f314c;
+}
+
+p,
+label,
+li,
+td,
+th,
+span {
+  color: inherit;
+}
+
+a {
+  color: var(--link);
+  text-decoration-color: rgba(23, 111, 177, 0.35);
+  text-underline-offset: 0.15em;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--link-hover);
+  text-decoration-color: rgba(15, 77, 122, 0.65);
+}
+
+.app-shell {
+  position: relative;
+}
+
+.app-navbar {
+  background: linear-gradient(92deg, #14324b 0%, #286189 48%, #2f739f 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.app-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+}
+
+.app-brand-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(6, 26, 43, 0.35);
+}
+
+.app-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.app-navbar .nav-link:hover,
+.app-navbar .nav-link:focus {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.app-navbar .nav-link.active {
+  background: var(--navbar-active);
+  color: #1f2a37;
+}
+
+.app-main .text-secondary,
+.app-main .text-muted {
+  color: var(--ink-soft) !important;
+}
+
+.app-main {
+  animation: app-fade-in 0.45s ease;
+}
+
+.app-surface-card {
+  background-color: var(--surface);
+  border-radius: 1rem;
+}
+
+.app-hero-card {
+  background: linear-gradient(165deg, var(--surface) 0%, var(--surface-accent) 100%);
+  border-radius: 1.2rem;
+}
+
+.table {
+  border-color: #d6e4f2;
+}
+
+.table thead.table-dark {
+  background: var(--table-head-bg);
+}
+
+.table thead.table-dark th {
+  color: var(--table-head-text);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.table-striped > tbody > tr:nth-of-type(even) > * {
+  background-color: var(--table-row-even);
+}
+
+.table-hover > tbody > tr:hover > * {
+  background-color: var(--table-row-hover);
+}
+
+.table thead th {
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, var(--brand-accent) 0%, var(--brand-accent-strong) 100%);
+  border-color: var(--brand-accent-strong);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(180deg, #ff9c3a 0%, #da5f00 100%);
+  border-color: #da5f00;
+}
+
+.btn-outline-primary {
+  border-color: #1e6fa8;
+  color: #1e6fa8;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: #1e6fa8;
+  border-color: #1e6fa8;
+  color: #ffffff;
+}
+
+.btn-outline-secondary {
+  border-color: #54738f;
+  color: #2f4f6b;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  background-color: #54738f;
+  border-color: #54738f;
+  color: #ffffff;
+}
+
+.link-primary,
+.app-main .link-primary {
+  color: var(--link) !important;
+}
+
+.link-primary:hover,
+.app-main .link-primary:hover {
+  color: var(--link-hover) !important;
+}
+
+.modal .modal-content {
+  border: 0;
+  border-radius: 0.9rem;
+}
+
+@keyframes app-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 991px) {
+  .app-navbar .navbar-nav {
+    justify-content: flex-start;
+  }
+
+  .app-brand-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .app-navbar .nav-link {
+    font-size: 0.92rem;
+  }
+}
