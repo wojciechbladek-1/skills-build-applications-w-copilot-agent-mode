@@ -4,6 +4,7 @@ import DataTablePage from './DataTablePage';
 function Leaderboard() {
   return (
     <DataTablePage
+      codespaceEndpoint={`https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/leaderboard`}
       columns={['Rank', 'Athlete', 'Points']}
       emptyMessage="No leaderboard entries found."
       endpointPath="/leaderboard/"

@@ -4,6 +4,7 @@ import DataTablePage from './DataTablePage';
 function Users() {
   return (
     <DataTablePage
+      codespaceEndpoint={`https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/users`}
       columns={['#', 'Username', 'Email']}
       emptyMessage="No users found."
       endpointPath="/users/"

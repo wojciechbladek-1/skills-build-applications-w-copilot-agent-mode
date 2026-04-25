@@ -4,6 +4,7 @@ import DataTablePage from './DataTablePage';
 function Teams() {
   return (
     <DataTablePage
+      codespaceEndpoint={`https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/teams`}
       columns={['#', 'Team Name', 'Members']}
       emptyMessage="No teams found."
       endpointPath="/teams/"
