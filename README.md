@@ -12,5 +12,16 @@ Remember, it's self-paced so feel free to take a break! ☕️
 
 ---
 
+## Progress Update
+
+Verified Django API endpoints with curl:
+
+- /api/teams/
+- /api/users/
+- /api/workouts/
+- /api/activities/
+
+All endpoint checks returned HTTP 200 (April 25, 2026).
+
 &copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
 
